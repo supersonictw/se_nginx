@@ -4,7 +4,8 @@ A SELinux Module for Nginx to Write/Delete Files
 ## Before
 Type
     getenforce
-If you get nothing, quit it.
+If you get nothing or "Permissive", quit there.
+It means your Kernel do not or disable have SELinux.
 
 ## Installation
 Login as ROOT user, and than clone the Repo and type:
@@ -15,7 +16,7 @@ Login as ROOT user, and than clone the Repo and type:
 
 ## After
 Check your Nginx can write and delete files to web directory on the SELinux Enabled Machine
-### If your Nginx could not access to view any files
+### If your Nginx still could not access to view any files
 Login as ROOT and go to your web directory, type:
 
     chcon -R -t httpd_sys_content_t *
