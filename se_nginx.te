@@ -1,0 +1,20 @@
+
+module se_nginx 2.1;
+
+require {
+	type httpd_t;
+	type httpd_sys_content_t;
+        class file { write unlink create setattr };
+        class dir { add_name create setattr write remove_name rmdir};
+}
+
+#============= httpd_t ==============
+
+#!!!! The file will fix your nginx permissions on your system.  
+#!!!! Fix with $ restorecon -R -v /usr/share/nginx/*
+#!!!! This avc can be allowed using the boolean 'httpd_unified'
+allow httpd_t httpd_sys_content_t:file { write unlink create setattr };
+
+#!!!! This avc can be allowed using the boolean 'httpd_unified'
+allow httpd_t httpd_sys_content_t:dir { add_name create setattr write remove_name rmdir};
+
