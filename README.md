@@ -3,7 +3,9 @@ A SELinux Module for Nginx to Write/Delete Files
 
 ## Before
 Type
+
     getenforce
+
 If you get nothing or "Permissive", quit there.
 It means your Kernel do not or disable have SELinux.
 
