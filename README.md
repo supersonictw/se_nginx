@@ -15,7 +15,8 @@ Login as ROOT user, and than clone the Repo and type:
 
 ## After
 Check your Nginx can write and delete files to web directory on the SELinux Enabled Machine
-### If your Nginx could access to view any files, login as ROOT and go to your web directory, type:
+### If your Nginx could not access to view any files
+Login as ROOT and go to your web directory, type:
 
     chcon -R -t httpd_sys_content_t *
 
