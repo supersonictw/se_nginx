@@ -10,9 +10,11 @@ Check your machine by
     getenforce
 ```
 
-If you get nothing or "Permissive", it means your kernel don't installed SELinux or has been disabled.
+If you got "Permissive" or nothing, it means your SELinux has been disabled or uninstalled.
 
 ## Installation
+
+If SELinux has been install on your machine, follow these step to unblock the limit to access files in web directory for NGINX.
 
 - Login as `root`, and clone the repository, then type:
 
